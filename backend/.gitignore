@@ -1,0 +1,29 @@
+# Umgebungsvariablen-Dateien
+.env
+
+# Private Dateien
+private/
+encodeFiles.js
+privateFiles.json
+
+# Node.js Abhängigkeiten
+node_modules/
+
+# Log-Dateien
+*.log
+
+# Betriebssystem-spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# IDE-spezifische Dateien
+.vscode/
+.idea/
+
+# Build-Ordner
+dist/
+build/
+
+# Temporäre Dateien
+*.tmp
+*.swp
