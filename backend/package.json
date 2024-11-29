@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "decode-private-files": "node decodePrivateFiles.js",
-    "build": "npm run decode-private-files && npm start",
+    "build": "npm run decode-private-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
