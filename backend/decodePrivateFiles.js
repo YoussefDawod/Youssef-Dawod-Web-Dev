@@ -1,11 +1,15 @@
 const fs = require('fs');
+const path = require('path');
 
-if (!process.env.PRIVATE_FILES) {
-  console.error('PRIVATE_FILES Umgebungsvariable ist nicht gesetzt.');
+// Pfad zur Secret File
+const secretFilePath = path.join('/etc/secrets', 'privateFiles.json');
+
+if (!fs.existsSync(secretFilePath)) {
+  console.error('privateFiles.json Secret File ist nicht vorhanden.');
   process.exit(1);
 }
 
-const privateFiles = JSON.parse(process.env.PRIVATE_FILES);
+const privateFiles = JSON.parse(fs.readFileSync(secretFilePath, 'utf8'));
 
 const decodeBase64ToFile = (base64, filePath) => {
   const buffer = Buffer.from(base64, 'base64');
