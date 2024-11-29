@@ -1,5 +1,10 @@
 const fs = require('fs');
 
+if (!process.env.PRIVATE_FILES) {
+  console.error('PRIVATE_FILES Umgebungsvariable ist nicht gesetzt.');
+  process.exit(1);
+}
+
 const privateFiles = JSON.parse(process.env.PRIVATE_FILES);
 
 const decodeBase64ToFile = (base64, filePath) => {
