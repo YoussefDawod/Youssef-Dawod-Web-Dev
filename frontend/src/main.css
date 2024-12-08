@@ -1,0 +1,94 @@
+@import "@fontsource/roboto";
+@import "@fontsource/roboto/700.css";
+@import "@fontsource/fira-code";
+@import "@fontsource/merriweather";
+@import "@fontsource/merriweather/700.css";
+
+:root {
+  --pri-color: #00cec9;
+  --sec-color: #81ecec;
+  --ter-color: #00b894;
+
+  --font-color: #dfe6e9;
+  --font-color-highlight: #74b9ff;
+
+  --pri-bg-color: #0a0a0f;
+  --sec-bg-color: #1e272e;
+  --ter-bg-color: #34495e;
+
+  --hover-color: #55efc4;
+
+  --info-color: #42a5f5;
+  --error-color: #ef5350;
+  --success-color: #66bb6a;
+}
+
+[data-theme="light"] {
+  --pri-color: #0077b6; /* Primär: Blau */
+  --sec-color: #9fefff; /* Sekundär: Eisblau */
+  --ter-color: #005f73; /* Tertiär: Tiefblau */
+
+  --font-color: #212121; /* Tiefschwarz */
+  --font-color-highlight: #1d3557; /* Stahlblau */
+
+  --pri-bg-color: #ffffff; /* Weiß */
+  --sec-bg-color: #bfe1ff; /* Helles Grau-Grün */
+  --ter-bg-color: #bae7ff; /* Neutralgrau */
+
+  --hover-color: #00b4d8; /* Türkis-Blau */
+
+  --info-color: #2196f3; /* Info-Blau */
+  --error-color: #e53935; /* Fehler-Rot */
+  --success-color: #43a047; /* Erfolgs-Grün */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Particles im Hintergrund */
+}
+
+body {
+  background-color: var(--pri-bg-color);
+  transition: background-color 1s ease, color 1s ease;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem; /* Breite der Scrollleiste */
+}
+
+/* Stil für die Scrollleisten-Schiene */
+body::-webkit-scrollbar-track {
+  background: none; /* Hintergrund der Schiene */
+}
+
+/* Stil für den Scrollleisten-Daumen */
+body::-webkit-scrollbar-thumb {
+  background: var(--sec-bg-color); /* Farbe des Daumens */
+  border-radius: 0.5rem; /* Abgerundete Ecken */
+  cursor: grab;
+}
+
+/* Stil für den Daumen beim Hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--ter-bg-color); /* Farbe des Daumens beim Hover */
+}
+
+.icon {
+  color: var(--ter-color);
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: var(--hover-color);
+  transform: scale(1.2);
+}
