@@ -18,7 +18,7 @@ export const projectsData = [
   },
   {
     title: "Rezept Suche",
-    link: "https://youssefdawod.github.io/rezept-app/",
+    link: "https://rezept-suche.onrender.com/",
     description: [
       "Das Projekt ist eine moderne und schnelle Rezept-Webseite, entwickelt mit Vite.",
       " Nutzer können gezielt nach Rezepten suchen und erhalten detaillierte Informationen zu den Gerichten, einschließlich eines passenden Bildes.",
