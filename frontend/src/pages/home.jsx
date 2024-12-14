@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 import { useState, useEffect } from "react";
-import { projectsData } from "./projects";
+import projectsData from "../components/projectsData";
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -22,7 +22,7 @@ const Home = () => {
     const interval = setInterval(() => {
       const nextIndex = (currentImageIndex + 1) % imagesWithTitles.length;
       changeImage(nextIndex);
-    }, 5000); // Wechselt alle 3 Sekunden
+    }, 5000); // Wechselt alle 5 Sekunden
     return () => clearInterval(interval);
   }, [currentImageIndex]);
 
@@ -39,7 +39,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      
       <div id="developer" className="developer">
         <div className="developer-ti-sub">
           <h1 className="developer-title">Youssef Dawod</h1>
@@ -48,7 +47,7 @@ const Home = () => {
         <div className="developer-description">
           <p>
             Entwicklung moderner Webseiten mit den neuesten Technologien und
-            Tolls
+            Tools
           </p>
           <p>
             Kreative Ansätze treffen auf innovative Technik, um digitale
